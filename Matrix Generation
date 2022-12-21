@@ -1,0 +1,69 @@
+
+
+#Transpose the data: so each row represents a neuropsychological variable (age, gender, and edu corrected standardized score) and each column represents a participant.
+
+#Generate the correlation matrix (nxn). This can be run in spss or matlab. Essentially, you calculate a pearson correlation coefficent of each subject with every other subject in 
+#the dataset across all the neuropsychological variables. Save the resulting correlation table as a matrix. This is your connectivity matrix. 
+#Each participant should have a correlation coefficient representing how similar their neuropsych profile is with every other subject in the sample.
+
+* Encoding: UTF-8.
+
+
+[DataSet14] I:\Neuropsychology\Adult\2_Jessica Pommy\Research\ADNI subtyping paper\MCI_data_transposed.sav
+
+CORRELATIONS
+  /VARIABLES=K_6 K_30 K_38 K_41 K_42 K_44 K_45 K_50 K_51 K_54 K_57 K_60 K_77 K_80 K_87 K_98 K_101
+    K_102 K_103 K_107 K_108 K_111 K_112 K_116 K_126 K_128 K_135 K_138 K_141 K_142 K_150 K_155 K_158
+    K_160 K_161 K_168 K_169 K_176 K_178 K_179 K_182 K_187 K_188 K_195 K_200 K_204 K_205 K_214 K_217
+    K_222 K_225 K_227 K_231 K_240 K_241 K_243 K_249 K_256 K_258 K_269 K_273 K_276 K_282 K_284 K_285
+    K_288 K_289 K_290 K_291 K_292 K_293 K_294 K_296 K_307 K_314 K_324 K_325 K_326 K_331 K_336 K_339
+    K_344 K_351 K_354 K_361 K_362 K_376 K_377 K_378 K_384 K_388 K_389 K_390 K_393 K_394 K_397 K_401
+    K_406 K_407 K_408 K_409 K_410 K_414 K_417 K_422 K_423 K_424 K_429 K_434 K_442 K_443 K_445 K_446
+    K_448 K_449 K_450 K_458 K_461 K_464 K_469 K_476 K_478 K_481 K_485 K_501 K_505 K_507 K_511 K_513
+    K_514 K_518 K_531 K_539 K_544 K_546 K_549 K_551 K_552 K_557 K_563 K_566 K_567 K_568 K_572 K_579
+    K_588 K_590 K_598 K_604 K_607 K_608 K_611 K_613 K_621 K_625 K_626 K_629 K_631 K_634 K_638 K_641
+    K_644 K_649 K_656 K_658 K_667 K_668 K_669 K_671 K_673 K_675 K_679 K_695 K_697 K_698 K_702 K_708
+    K_709 K_715 K_718 K_721 K_722 K_723 K_725 K_727 K_729 K_746 K_748 K_750 K_752 K_769 K_770 K_771
+    K_782 K_783 K_792 K_800 K_802 K_821 K_825 K_830 K_832 K_834 K_835 K_839 K_851 K_855 K_856 K_860
+    K_861 K_865 K_867 K_869 K_871 K_872 K_873 K_874 K_878 K_880 K_887 K_890 K_892 K_904 K_906 K_908
+    K_909 K_912 K_913 K_914 K_915 K_917 K_919 K_921 K_922 K_924 K_925 K_928 K_930 K_932 K_941 K_945
+    K_947 K_950 K_952 K_954 K_957 K_958 K_961 K_973 K_976 K_978 K_982 K_987 K_989 K_994 K_997 K_1004
+    K_1007 K_1010 K_1015 K_1028 K_1030 K_1031 K_1032 K_1033 K_1034 K_1038 K_1040 K_1043 K_1045 K_1046
+    K_1051 K_1054 K_1057 K_1066 K_1070 K_1072 K_1073 K_1074 K_1075 K_1077 K_1078 K_1080 K_1088 K_1092
+    K_1097 K_1103 K_1104 K_1106 K_1114 K_1116 K_1117 K_1118 K_1119 K_1120 K_1121 K_1122 K_1126 K_1130
+    K_1131 K_1135 K_1138 K_1140 K_1148 K_1149 K_1155 K_1165 K_1168 K_1175 K_1182 K_1183 K_1186 K_1187
+    K_1188 K_1199 K_1204 K_1210 K_1211 K_1213 K_1215 K_1217 K_1218 K_1224 K_1225 K_1227 K_1231 K_1240
+    K_1243 K_1245 K_1246 K_1247 K_1255 K_1260 K_1265 K_1268 K_1269 K_1271 K_1275 K_1277 K_1279 K_1282
+    K_1284 K_1292 K_1293 K_1294 K_1295 K_1299 K_1300 K_1309 K_1311 K_1314 K_1315 K_1318 K_1321 K_1322
+    K_1326 K_1331 K_1338 K_1340 K_1343 K_1346 K_1350 K_1351 K_1352 K_1357 K_1363 K_1378 K_1380 K_1384
+    K_1387 K_1389 K_1393 K_1394 K_1398 K_1400 K_1406 K_1407 K_1408 K_1411 K_1412 K_1414 K_1417 K_1418
+    K_1419 K_1420 K_1421 K_1423 K_1425 K_1426 K_1427
+ /MATRIX=OUT ('\\mcwcorp\Departments\Neurology\Users\jpommy\MCI_output.sav').
+
+
+#if your matrix is in excel, to upload it into matlab use a script like this:  
+  
+
+Corresponding Matlab matrices 
+  Example:
+    A = readmatrix('MCI.xlsx')
+    W = A
+
+#Replace negative values with 0 (either in excel or using matlab). The meaning of negative correlation coefficients in these analyses
+#is not entirely clear. Prior studies eliminated negative correlations to comply with infomap requirements. It is now possible to run 
+#analyses in infomap with negative values, however, we are unsure the best way to interpret that data so we have opted to stick with only
+#positive correlations. 
+  
+
+function [new_value] = ReplaceEmptyWithNaN(value)
+%UNTITLED Summary of this function goes here
+%   Detailed explanation goes here
+if isempty(value)
+    new_value = NaN;
+else
+    new_value = value;
+end
+
+end
+
+
