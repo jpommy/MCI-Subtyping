@@ -1,0 +1,30 @@
+#Run using Online Infomap or Infomap.py
+# Please refer to: 
+# Infomap: Edler, D., Holmgren, A., & Rosvall, M. (2022). The MapEquation software package (Version 2.6.1) [Computer software]. https://mapequation.org
+# https://github.com/mapequation/infomap-online
+#We used the following parameters for running the analyses on infomap online. 
+
+
+  Infomap v1.3.0 
+  Input network: MCI.net
+  Output path:   ./
+    
+## To examine communities across weighted thresholds, enter desired threshold 
+##e.g.for 0.5 threshold where links below  weight of 0.5 will be ignored
+--c MCI.net
+--weight-threshold 0.5
+--o tree,ftree,clu      
+--clu-level -1
+--output clu
+-- num-trials = 100
+-- core-loop-limit = 1000
+                 
+#These parameters were selected based on recommendations from both Feckzo and based on infomap documentation. 
+#If one opts to run the analyses online, one would need to upload each individual matrix file separately, select the parameters, and then save all output.
+#Analyses can be run using stand-alone simple_infomap.py. We would recommend users download infomap from either https://www.mapequation.org/infomap/
+# or https://github.com/mapequation/infomap if they wish to run the stand alone version on their personal computer.
+
+#example useage when running infomap from command line with python
+          # Infomap network_file out_directory [options]
+
+          # Infomap MCI.net ./Neuropsychology\Adult\2_Jessica Pommy\Research\ --weight-threshold 0.5 --tree --ftree --clu --clu-level -1 -o clu -N 100 -L 1000 -vvv 
