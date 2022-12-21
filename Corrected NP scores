@@ -1,0 +1,17 @@
+#ADNI Data:Neuropsych Variables for healthy controls and MCI at baseline. Age-, gender and education corrected scores 
+
+#SPSS Syntax for computing age-, gender-, and education-corrected scores
+* Encoding: UTF-8.
+ REGRESSION 
+  /MISSING LISTWISE 
+  /STATISTICS COEFF OUTS R ANOVA 
+  /CRITERIA=PIN(.05) POUT(.10) 
+  /NOORIGIN 
+  /DEPENDENT BNTSPONT 
+  /METHOD=ENTER AGE gender PTEDUCAT 
+  /SAVE PRED ZPRED RESID.
+
+COMPUTE BNT_age_g_edu=(((BNTSPONT)-((28.733)+(-.045*AGE)+(-1.071*gender)+(.163*PTEDUCAT))))
+    /2.543.
+EXECUTE.
+
