@@ -23,7 +23,5 @@
 #If one opts to run the analyses online, one would need to upload each individual matrix file separately, select the parameters, and then save all output.
 #Analyses can be run using stand-alone simple_infomap.py. We would recommend users download infomap from either https://www.mapequation.org/infomap/
 # or https://github.com/mapequation/infomap if they wish to run the stand alone version on their personal computer.
-
-#example useage with simple_infomap.py
-
-.\Infomap ['--o] MCI.net ./Neuropsychology\Adult\2_Jessica Pommy\Research\
+#example useage with infomap file in python
+# ./Infomap ['--o] MCI.net --weight-threshold 0.5 --tree --ftree --clu --clu-level -1 -o clu -N 100 -vvv ./Neuropsychology\Adult\2_Jessica Pommy\Research\
